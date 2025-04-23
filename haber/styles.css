@@ -1,0 +1,270 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 70px; 
+}
+
+
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto; 
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; 
+}
+
+
+.dropdown-menu {
+    display: none; 
+    max-height: 200px; 
+    overflow-y: auto; 
+}
+
+
+/* Döviz Çubuğu */
+.currency-bar {
+    background: #f5f5f5;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#currencyData {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0 10px;
+}
+
+.currency-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.name {
+    font-weight: bold;
+    color: #333;
+}
+
+.value {
+    color: #444;
+}
+
+.change {
+    font-size: 0.85em;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.up {
+    color: #28a745;
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.down {
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.error {
+    color: #dc3545;
+    padding: 10px;
+}
+
+/* Haberler*/
+
+.carousel {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(56, 177, 128, 0.6);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+}
+
+/* Tek haber */
+    .kucuk-haber {
+        border: 1px solid #8db08c;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 15px 0;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    .kucuk-haber p {
+        color: #555;
+        margin: 0;
+        line-height: 1.5;
+    }
+   
+/* Hava Durumu */
+
+.weather-widget {
+    background-color: #31608f;
+    color: rgb(247, 231, 244);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.current-weather {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.current-weather h5 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.current-weather img {
+    width: 50px;
+    margin: 10px 0 5px;
+}
+
+.weather-data {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: nowrap;
+    padding: 5px; 
+}
+
+.weather-day {
+    flex: 0 0 auto;
+    background: #224f80;
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 13px;
+    min-width: 70px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    overflow: hidden; /* Taşma engelleme */
+}
+
+.weather-day img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin: 4px 0;
+}
+
+.weather-day:hover {
+    transform: scale(1.05);
+    background-color: #2a5e94;
+}
+
+/* Reklam */
+.ad {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-ad {
+    left: 20px;
+}
+
+.right-ad {
+    right: 20px;
+}
+
+.ad-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.ad img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
+
+.ad-content {
+    padding: 10px;
+    background: rgb(207, 236, 210);
+    text-align: center;
+}
+
+.ad-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.ad-discount {
+    font-size: 13px;
+    color: #e63946;
+    font-weight: bold;
+}
+
+.ad-price {
+    margin-top: 5px;
+}
+
+.old-price {
+    font-size: 11px;
+    color: #666;
+    text-decoration: line-through;
+    display: block;
+}
+
+.new-price {
+    font-size: 14px;
+    color: #2a9d8f;
+    font-weight: bold;
+    display: block;
+}
+
+.close-ad {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #e30d0de7;
+    color: rgb(236, 248, 248);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1001;
+}
+.ad:hover {
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}

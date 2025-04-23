@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Haber</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--  CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Navbar--
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">E Haber</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-5">
+                        <a class="nav-link active" href=  "#">GÜNDEM</a>
+                    </li>
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle" href="#" id= "navbarDropdown1" data-bs-toggle="dropdown" aria-expanded="false">EKONOMİ</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="#">Döviz Kurları</a></li>
+                            <li><a class="dropdown-item" href="#">Borsa</a></li>
+                            <li><a class="dropdown-item" href="#">Altın</a></li>
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" data-bs-toggle="dropdown" aria-expanded="false">SPOR</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="#">Futbol</a></li>
+                            <li><a class="dropdown-item" href="#">Basketbol</a></li>
+                            <li><a class="dropdown-item" href="#">Voleybol</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item me-5"><a class="nav-link" href="#">DÜNYA</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="#">MAGAZİN</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="#">HAYAT</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="#">YAZARLAR</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="#">FİNANS</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="#">RESMİ İLANLAR</a></li>
+                    <li class="nav-item me-5"><a class="nav-link" href="#">GÜNÜN İÇİNDEN</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <!--Döviz -->
+<div class="currency-bar">
+    <div class="container">
+        <div class="currency-scroll-container">
+            <div id="currencyData" class="currency-row">
+                <!-- JS ile doldurulacak -->
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Ana İçerik -->
+    <main class="container my-4">
+
+        <div class="row" style="height: 65vh;">
+            
+            <div class="col-md-8 p-0">
+                <div id="newsCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                    <div class="carousel-inner h-100" id="carouselInner">
+                       
+                        
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+    
+            <div class="col-md-4 p-0">
+                <div class="d-flex flex-column h-100">
+                    <!-- Küçük Haber Kutusu -->
+                    <div id="kucuk-haber-container" class="flex-fill overflow-auto p-2 border-bottom">
+                    </div>
+    
+                    <!-- Hava Durumu Kutusu -->
+                    <div class="weather-widget flex-fill p-2">
+                        <div id="currentWeather" class="current-weather text-center mb-2">
+                            <!-- Güncel hava durumu -->
+                        </div>
+                        <div class="weather-data" id="weatherData">
+                            <!-- Detaylı hava -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+       
+    </main>
+ 
+<!-- Sol Reklam -->
+<div class="ad left-ad">
+    <span class="close-ad" onclick="closeAd('left')">X</span>
+    <a href="https://www.koton.com" target="_blank" class="ad-link">
+        <img src="https://r.resimlink.com/UYv91T7rxmAd.jpg" alt=" Yeni Sezon Sweatshirt ">
+        <div class="ad-content">
+            <div class="ad-title">YENİ SEZON ÜRÜNLERİ</div>
+            <div class="ad-discount">ŞİMDİ %30 İNDİRİMLİ</div>
+        </div>
+    </a>
+</div>
+
+<!-- Sağ Reklam -->
+<div class="ad right-ad">
+    <span class="close-ad" onclick="closeAd('right')">X</span>
+    <a href="https://www.nike.com" target="_blank" class="ad-link">
+        <img src="https://r.resimlink.com/Ttl6G7kQCgdA.webp" alt="Özel Ayakkabı İndirimi">
+        <div class="ad-content">
+            <div class="ad-title">SPOR AYAKKABILAR</div>
+            <div class="ad-price">
+                <span class="old-price">3.599 TL</span>
+                <span class="new-price">2.599 TL</span>
+            </div>
+        </div>
+    </a>
+</div>
+
+    <!-- Bootstrap JS ve Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
